@@ -1,0 +1,392 @@
+
+
+.voverlay{
+    display: none;
+}
+
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; /* align items in Main Axis */
+    align-items: center; /* align items in Cross Axis */
+    //align-content: stretch; /* Extra space in Cross Axis */
+    //flex-direction: column;
+    z-index: 1;
+}
+
+ .header{
+    //border: 1px solid #000;
+    //flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    //background-color: rgba(195, 151, 181, 0.5); fa9c09
+    background-color: rgba(250, 156, 9, 0.5);
+    //opacity: 0.5;
+    //box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.10);
+}
+
+
+.logo{
+    //border: 1px solid green;
+    min-height: 100px;
+    max-width:100px;
+    //flex-basis: 150px;
+    flex-grow:1;
+    background:  url(../assets/tattle_logo.png) no-repeat left;
+    background-size: 75%;
+    margin-left:75px;
+    //border: 1px solid;
+}
+
+.caption{
+    flex-basis: 200px;
+    min-height: 100px;
+    align-items: center;
+    padding-top:15px;
+    color: #777;
+}
+
+.header nav{
+    //border:2 solid red;
+    flex-basis: 440px;
+    //background: red;
+    flex-grow: 1;
+    flex-shrink:2;
+    opacity: 1;
+    padding-right: 50px;
+}
+
+ nav ul{
+        //display: flex;
+        text-align: left;
+        //justify-content: flex-start;
+        //flex-wrap: wrap;
+    }
+
+.header nav ul, .footer ul{
+    list-style-type: none;
+    padding:0;
+}
+
+.header nav ul li{ 
+    margin-right: 25px;
+    display:block;
+    //border: 1px solid;
+    padding: 5px;
+}
+
+.header nav ul li a{ 
+    text-decoration: none;
+    width: auto;
+    color: #000;
+    //display: block  !important;
+    padding: 6px 15px;
+    border-top: 1px solid #fff;
+}
+
+.header nav ul li a:hover{ 
+    //background: #ce8645;
+    color: #f1f1f1;
+    border-top: 3px solid #f1f1f1;
+    padding-top: 4px;
+}
+
+.mainbody{
+    //flex-basis: 100px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    //background-color: cyan;
+}
+
+.brand{
+    width: 100%;
+    color: #777;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.brand span{
+    font-size: 13px;
+}
+
+.searchholder{
+    width: auto;
+    //min-height: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin:10px;
+    padding: 25px 20px;
+    background: rgba(248, 157, 74, 0.5);
+    //border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    //box-shadow: 0 0 20px #666;
+    box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.10);
+}
+
+.searchholder span{
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.destination{
+    flex-basis: 450px;
+    margin-right: 25px;
+    flex-grow: 3;
+    flex-shrink: 12;
+    //border: 1px solid;
+}
+
+.destination .destinationtext{
+    width:100%;
+    padding:15px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.footer{
+    width: 100%;
+    //border-radius: 5px 5px 0;
+    min-height: 50px;
+    color: #f1f1f1;
+    background-color: rgba(95, 68, 49, 0.6);
+    padding: 0 75px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+    font-size: 11px;
+}
+
+.otherlinks{
+    flex-grow: 1;
+}
+
+.sociallinks ul{
+    flex-grow: 1;
+    display: flex;
+    //border: 1px solid;
+}
+
+.sociallinks ul li a{
+    display: block;
+    max-width: 30px;
+    //border: 1px solid;
+    margin: 0 6px;
+}
+
+.sociallinks ul li a img{
+    width: 30px;
+    height: 30px;
+}
+
+.footer a, .brand span a{
+    color: #f1f1f1;
+}
+
+.footer a:hover, .brand span a:hover{
+    color: #c1c1c1;
+}
+
+
+.destinationtextholder{
+    margin-top: 5px;
+}
+
+.traveldate{
+    flex-basis: 30px;
+    //border: 1px solid;
+    margin-right: 25px;
+    //flex-grow: 1;
+}
+
+mat-form-field *, mat-datepicker {
+    //z-index: 99999 !important;
+}
+
+#mat-input-0{
+    color: #fff;
+}
+
+
+.nooftravelers{
+    flex-basis: 180px;
+    max-width:180px;
+    //border: 1px solid;
+    flex-grow: 3;
+}
+
+.mat-mini-fab {
+    zoom: 0.6;
+}
+
+.nooftravelerscount{
+    width: 20px;
+    margin:0 5px;
+    text-align: center;
+    border: 0;
+    min-height:15px;
+}
+
+.nooftravelersparent{
+    display: flex;
+}
+
+.nooftravelerscount{
+    flex-grow: 1;
+    justify-content: center;
+   // border: 1px solid;
+}
+
+ .nooftravelerscounter{
+    background-color: #cf8e60;
+ }
+
+.smallcaption{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+}
+
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+.searchbtn{
+    background:  url(../assets/orange-go.png) no-repeat right;
+    background-size: 85%;
+    min-height: 50px;
+    flex-basis:80px;
+    max-width:80px;
+    //border: 1px solid;
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px){
+
+    .wrapper{
+        z-index: 1;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+    .header{
+        flex-basis: 100px;
+    }
+
+     nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .caption{ 
+        color: #f1f1f1; 
+    }
+
+   .header nav ul li a{ 
+    color: #fff;
+   }
+
+   .brand{
+    text-align: left;
+   }
+
+   .searchholder{
+    width: 90%;
+}
+
+    .mainbody{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .brand{
+    width: 90%;
+    color: #f1f1f1;
+    font-size: 60px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+    .resultsContainer{
+        flex: 1;
+        display: none;
+        overflow: auto;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-top: 40px;
+        justify-content: space-between;
+
+    }
+
+    .resultsContainer .resultcard{
+        min-height: min-content;
+        flex-basis: 350px;
+        max-width: 350px;
+        flex-grow: 1;
+        margin: 10px 15px 0 0;
+        //display: flex;
+    }
+
+
+
+    .voverlay {
+        display: block;
+        position: relative;
+        top: 0;
+        left:0;
+        height:100%;
+        width:100%;
+        &:before {
+            content:'';
+            display: block;
+            padding-top: 50%;  // 50% equals a 2:1 ratio. you can read more about
+            // the ratios in the link
+        }
+        z-index:-999;
+    }
+
+    video#bgvid { 
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       min-width: 100%;
+       min-height: 100%;
+       width: auto;
+       height: auto;
+       z-index: -100;
+       transform: translateX(-50%) translateY(-50%);
+       //background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+       background-size: cover;
+       transition: 1s opacity;
+   }
+
+
+
+
+}
