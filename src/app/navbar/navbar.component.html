@@ -1,0 +1,22 @@
+
+
+
+<!-- <div class="header" [style.flex-basis]="flexbasis" @headerShrink> -->
+  <div class="header">
+    <div class="logo" routerLink="/"></div>
+    <div class="caption" [style.display]="captionState" >
+      "share and celebrate cultures openly and freely, and discover that <strong>we are not so different after all!</strong>”
+    </div>
+
+    <!-- <nav class="mainnav" [style.display]="(menuState)? 'block':'none'"> -->
+      <nav class="mainnav">
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Become a Tattler</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+
+      </nav>
+      <div class="menutoggle"><a href="#" (click)="showMenu()">menu</a></div>
+    </div>

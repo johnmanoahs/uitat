@@ -21,3 +21,17 @@
 
     font-size: 14px;
 }
+
+ul{
+    list-style-type: none;
+    padding:0;
+}
+
+
+app-home{
+    width: 100%;
+}
+
+app-footer{
+    width: 90%;
+}

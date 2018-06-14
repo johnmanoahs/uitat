@@ -11,7 +11,9 @@ import { MatCardModule } from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { SearchresultsComponent } from './searchresults/searchresults.component';
 import { HomeComponent } from './home/home.component';
-import { NotfoundComponent } from './notfound/notfound.component'
+import { NotfoundComponent } from './notfound/notfound.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component'
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatMomentDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -23,7 +25,9 @@ import { NotfoundComponent } from './notfound/notfound.component'
     PlotonmapComponent,
     SearchresultsComponent,
     HomeComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

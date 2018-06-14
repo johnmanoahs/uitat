@@ -10,6 +10,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  //host: {class: 'homeClass'},
   styleUrls: ['./home.component.css'],
   animations: [
   	trigger('fade', [

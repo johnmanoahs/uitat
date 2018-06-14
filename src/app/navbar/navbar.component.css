@@ -1,0 +1,120 @@
+.header{
+    //border: 1px solid #000;
+    //flex-basis: 300px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    //background-color: rgba(195, 151, 181, 0.5); fa9c09
+    background-color: rgba(250, 156, 9, 0.5);
+    //opacity: 0.5;
+    //box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.10);
+}
+
+
+.logo{
+    //border: 1px solid green;
+    min-height: 100px;
+    max-width:100px;
+    //flex-basis: 150px;
+    flex-grow:1;
+    background:  url(../../assets/tattle_logo.png) no-repeat left;
+    background-size: 75%;
+    margin-left:75px;
+    //border: 1px solid;
+}
+
+.caption{
+    flex-basis: 200px;
+    min-height: 100px;
+    align-items: center;
+    padding-top:15px;
+    color: #777;
+}
+
+.header nav{
+    //border:2 solid red;
+    flex-basis: 440px;
+    //background: red;
+    flex-grow: 1;
+    flex-shrink:2;
+    opacity: 1;
+    padding-right: 50px;
+
+}
+
+.mainnav{
+    display: none;
+}
+
+nav ul{
+    //display: flex;
+    text-align: left;
+    margin:0;
+    //justify-content: flex-start;
+    //flex-wrap: wrap;
+    //height:0;
+}
+
+.header nav ul, .footer ul{
+    list-style-type: none;
+    padding:0;
+}
+
+.header nav ul li{ 
+    margin-right: 25px;
+    display:block;
+    //border: 1px solid;
+    padding: 5px;
+}
+
+.header nav ul li a{ 
+    text-decoration: none;
+    width: auto;
+    color: #000;
+    //display: block  !important;
+    padding: 6px 15px;
+    border-top: 1px solid #fff;
+}
+
+.header nav ul li a:hover{ 
+    //background: #ce8645;
+    color: #f1f1f1;
+    border-top: 3px solid #f1f1f1;
+    padding-top: 4px;
+}
+
+.menutoggle{
+    width: 100%;
+    background: #f1f1f1;
+    padding: 5px;
+}
+
+
+@media screen and (min-width: 768px){
+
+ .header{
+        flex-basis: 100px;
+    }
+
+    .mainnav{
+        display:inline-block;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .menutoggle{
+        display:none;
+    }
+
+    .caption{ 
+        color: #f1f1f1; 
+    }
+
+    .header nav ul li a{ 
+        color: #fff;
+    }
+
+}
