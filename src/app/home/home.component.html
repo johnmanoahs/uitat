@@ -1,0 +1,265 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class="wrapper">
+
+  <div class="header" [style.flex-basis]="flexbasis" @headerShrink>
+    <div class="logo"></div>
+    <div class="caption" [style.display]="captionState" >
+      "share and celebrate cultures openly and freely, and discover that <strong>we are not so different after all!</strong>”
+    </div>
+
+    <nav class="mainnav" [style.display]="(menuState)? 'block':'none'">
+<!-- <nav class="mainnav"> -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Become a Tattler</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+    </nav>
+    <div class="menutoggle"><a href="#" (click)="showMenu()">menu</a></div>
+  </div>
+
+  <div class="mainbody">
+
+    <div class="brand" [style.display]="captionState">tattle. <span>it's OK to gossip, sometimes. <a href="#">Know why</a></span></div>
+
+    <div class="searchholder" @searchTransform>
+      <div class="destination">
+        <span>What's your next quest going to be...</span>
+        <div class="destinationtextholder">
+          <input type="text" class="destinationtext" placeholder="Try Vancouver, BC or water rafting or Chicken tikka..." autofocus />
+          <!-- <mat-form-field>
+            <mat-icon matPrefix>mode_search</mat-icon>
+            <input type="text" matInput [formControl]="myControl" placeholder="Try Vancouver, BC or hiking..." />
+          </mat-form-field> -->
+        </div>
+      </div>
+
+      <div class="traveldate">
+        <span>When...</span>
+        <div>
+         <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="nooftravelers">
+      <span>How many of you...</span>
+      
+      <div class="nooftravelersparent">
+        <div class="nooftravelerscount">
+          <div class="center">
+            <div class="smallcaption">Adults</div>
+            <button mat-mini-fab color="primary" class="nooftravelerscounter">
+              <mat-icon aria-label="Example icon-button with a heart icon">remove</mat-icon>
+            </button> 
+            <input type="text" class="nooftravelerscount" value="1" />
+            <button mat-mini-fab color="primary" class="nooftravelerscounter">
+              <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+            </button> 
+          </div>
+        </div>
+
+        <div class="nooftravelerscount">
+          <div class="smallcaption">Children</div>
+          <div class="center">
+            <button mat-mini-fab color="primary" class="nooftravelerscounter">
+              <mat-icon aria-label="Example icon-button with a heart icon">remove</mat-icon>
+            </button> 
+            <input type="text" class="nooftravelerscount" value="1" />
+            <button mat-mini-fab color="primary" class="nooftravelerscounter">
+              <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+            </button> 
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- <div class="searchbtn" (click)="tSearch()"></div> -->
+    <div class="searchbtn"><a routerLink="/searchresults">Let's Go</a></div> 
+  </div>
+
+  <div class="resultsContainer" [style.display]="resultState" @fade>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="resultcard">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="otherlinks">
+    &copy; Tattle Inc., 2018  
+    <a href="#">Read our privacy policy</a> 
+    <a href="#">Contact us</a> 
+  </div>
+  <div class="sociallinks">
+    <ul>
+      <li><a href="https://www.facebook.com/informantsecret/?ref=tattle.com-footer" target="_blank"><img src="./assets/fb.png" /></a></li>
+      <li><a href="https://twitter.com/InformantSecret/?ref=tattle.com-footer" target="_blank"><img src="./assets/tw.png" /></a></li>
+      <li><a href="https://www.youtube.com/channel/UCdirNpB0Qwuze56TsMpASVg?view_as=subscriber&ref=tattle.com-footer" target="_blank"><img src="./assets/yt.png" /></a></li>
+      <li><a href="https://www.instagram.com/secretinformant/?ref=tattle.com-footer" target="_blank"><img src="./assets/inst.png" /></a></li>
+    </ul>
+  </div>
+</div>
+
+
+</div>
+
+
+<div class="voverlay" [style.display]="captionState">
+  <!-- <video playsinline autoplay muted loop poster="./assets/app.swans.png" id="bgvid"> -->
+    <video playsinline autoplay muted loop id="bgvid">
+      <!-- <source src="polina.webm" type="video/webm"> -->
+        <source src="./assets/app.sunset.mp4" type="video/mp4">
+        </video>
+      </div>
+
+
+
+
+

@@ -48,24 +48,5 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ]
 })
 export class AppComponent {
-  title = 'app';
-  display = 'none';
-  resultState = 'none';
-  captionState = '';
-  flexbasis = '100px';
-  searchbarWidth = '90%';
-
-  tSearch(){
-  	if(this.resultState == 'none'){
-  		this.resultState = 'flex';
-  		this.captionState = 'none';
-  		
-  	}
-  	else{
-  		this.resultState = 'none';
-  	}
-  	this.flexbasis = '30px';
-  	this.searchbarWidth = '100%';
-  }
 
 }

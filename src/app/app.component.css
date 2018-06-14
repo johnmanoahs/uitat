@@ -18,7 +18,7 @@
     z-index: 1;
 }
 
- .header{
+.header{
     //border: 1px solid #000;
     //flex-basis: 300px;
     display: flex;
@@ -59,14 +59,21 @@
     flex-shrink:2;
     opacity: 1;
     padding-right: 50px;
+
 }
 
- nav ul{
-        //display: flex;
-        text-align: left;
-        //justify-content: flex-start;
-        //flex-wrap: wrap;
-    }
+.mainnav{
+    display: none;
+}
+
+nav ul{
+    //display: flex;
+    text-align: left;
+    margin:0;
+    //justify-content: flex-start;
+    //flex-wrap: wrap;
+    //height:0;
+}
 
 .header nav ul, .footer ul{
     list-style-type: none;
@@ -94,6 +101,12 @@
     color: #f1f1f1;
     border-top: 3px solid #f1f1f1;
     padding-top: 4px;
+}
+
+.menutoggle{
+    width: 100%;
+    background: #f1f1f1;
+    padding: 5px;
 }
 
 .mainbody{
@@ -126,6 +139,7 @@
     margin:10px;
     padding: 25px 20px;
     background: rgba(248, 157, 74, 0.5);
+    //background: rgba(256, 256, 256, 0.8);
     //border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
@@ -159,7 +173,7 @@
     min-height: 50px;
     color: #f1f1f1;
     background-color: rgba(95, 68, 49, 0.6);
-    padding: 0 75px;
+    padding: 10px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -169,6 +183,11 @@
 
 .otherlinks{
     flex-grow: 1;
+}
+
+.otherlinks a{
+ display: block;
+ margin: 3px 0;
 }
 
 .sociallinks ul{
@@ -244,12 +263,12 @@ mat-form-field *, mat-datepicker {
 .nooftravelerscount{
     flex-grow: 1;
     justify-content: center;
-   // border: 1px solid;
+    // border: 1px solid;
 }
 
- .nooftravelerscounter{
+.nooftravelerscounter{
     background-color: #cf8e60;
- }
+}
 
 .smallcaption{
     color: #fff;
@@ -288,26 +307,34 @@ mat-form-field *, mat-datepicker {
         flex-basis: 100px;
     }
 
-     nav ul{
+    .mainnav{
+        display:inline-block;
+    }
+
+    nav ul{
         display: flex;
         justify-content: flex-end;
+    }
+
+    .menutoggle{
+        display:none;
     }
 
     .caption{ 
         color: #f1f1f1; 
     }
 
-   .header nav ul li a{ 
-    color: #fff;
-   }
+    .header nav ul li a{ 
+        color: #fff;
+    }
 
-   .brand{
-    text-align: left;
-   }
+    .brand{
+        text-align: left;
+    }
 
-   .searchholder{
-    width: 90%;
-}
+    .searchholder{
+        width: 90%;
+    }
 
     .mainbody{
         align-items: center;
@@ -316,16 +343,21 @@ mat-form-field *, mat-datepicker {
     }
 
     .brand{
-    width: 90%;
-    color: #f1f1f1;
-    font-size: 60px;
-    justify-content: center;
-}
+        width: 90%;
+        color: #f1f1f1;
+        font-size: 60px;
+        justify-content: center;
+    }
+
+    .footer{
+        padding: 0 75px;
+    }
 
 
-
-
-
+    .otherlinks a{
+        display: inline-block;
+        margin: 0 7px;
+    }
 
 
 
@@ -372,19 +404,19 @@ mat-form-field *, mat-datepicker {
     }
 
     video#bgvid { 
-       position: fixed;
-       top: 50%;
-       left: 50%;
-       min-width: 100%;
-       min-height: 100%;
-       width: auto;
-       height: auto;
-       z-index: -100;
-       transform: translateX(-50%) translateY(-50%);
-       //background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-       background-size: cover;
-       transition: 1s opacity;
-   }
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -100;
+     transform: translateX(-50%) translateY(-50%);
+     //background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+     background-size: cover;
+     transition: 1s opacity;
+ }
 
 
 
