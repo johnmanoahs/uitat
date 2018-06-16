@@ -4,19 +4,21 @@
 <!-- <div class="header" [style.flex-basis]="flexbasis" @headerShrink> -->
   <div class="header">
     <div class="logo" routerLink="/"></div>
-    <div class="caption" [style.display]="captionState" >
+    <!-- <div class="caption" [style.display]="captionState" > -->
+      <div class="caption">
       "share and celebrate cultures openly and freely, and discover that <strong>we are not so different after all!</strong>”
     </div>
 
     <!-- <nav class="mainnav" [style.display]="(menuState)? 'block':'none'"> -->
       <nav class="mainnav">
         <ul>
-          <li><a routerLinkActive="menuactive" class="menuactive" routerLink="/">Home</a></li>
-          <li><a routerLinkActive="menuactive" href="#">About Us</a></li>
+          <li><a routerLinkActive="menuactive" routerLink="/">Home</a></li>
+          <li><a routerLinkActive="menuactive" href="/searchresults">About Us</a></li>
           <li><a routerLinkActive="menuactive" href="#">Become a Tattler</a></li>
           <li><a routerLinkActive="menuactive" href="#">Blog</a></li>
         </ul>
 
       </nav>
-      <div class="menutoggle"><a href="#" (click)="showMenu()">menu</a></div>
+      <!-- <div class="menutoggle"><a href="#" (click)="showMenu()">menu</a></div> -->
+      <div class="menutoggle"><a href="#">menu</a></div>
     </div>

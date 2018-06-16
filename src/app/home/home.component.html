@@ -70,19 +70,13 @@
 
 
 
-
-
-
-
-
-
 <div class="voverlay" [style.display]="captionState">
 	<!-- <video playsinline autoplay muted loop poster="./assets/app.swans.png" id="bgvid"> -->
-		<video playsinline autoplay muted loop id="bgvid">
-			<!-- <source src="polina.webm" type="video/webm"> -->
-				<source src="./assets/app.sunset_lowres.mp4" type="video/mp4">
-				</video>
-			</div>
+		<video #bgvideo role="presentation" preload="true" muted="muted" autoplay="true" loop="true" id="bgvid">
+			<source src="./assets/app.sunset_lowres.webm" type="video/webm"> 
+			<source src="./assets/app.sunset_lowres.mp4" type="video/mp4">
+		</video>
+</div>
 
 
 

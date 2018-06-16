@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 // import  {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -48,7 +48,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   	])
   ]
 })
-export class HomeComponent {
+export class HomeComponent{
   title = 'app';
   display = 'none';
   resultState = 'none';
@@ -56,6 +56,9 @@ export class HomeComponent {
   flexbasis = '100px';
   searchbarWidth = '90%';
   menuState = true;
+
+@ViewChild('bgvideo') bgvideo: any;
+
 
   tSearch(){
   	if(this.resultState == 'none'){
@@ -72,6 +75,17 @@ export class HomeComponent {
 
   showMenu(){
   	this.menuState = !this.menuState;
+  }
+
+  ngOnInit(){
+    this.bgvideo.nativeElement.play();
+    document.getElementById('bgvid').onplay = function(){
+      console.log('playing');
+    }
+  }
+
+  OnDestroy(){
+    this.bgvideo.nativeElement.play();
   }
 
 }

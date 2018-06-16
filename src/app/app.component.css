@@ -41,4 +41,8 @@
         width: 90%;
     }
 
+    app-searchresults{
+        overflow-y: scroll;
+    }
+
 }
