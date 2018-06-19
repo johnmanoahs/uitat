@@ -1,0 +1,60 @@
+<!-- <div class="searchholder" @searchTransform> -->
+<div class="searchholder">
+
+	<div class="destination">
+		<span>What's your next quest going to be...</span>
+		<div class="destinationtextholder">
+			<input type="text" class="destinationtext" placeholder="Try Vancouver, BC or water rafting or Chicken tikka..." autofocus />
+          <!-- <mat-form-field>
+            <mat-icon matPrefix>mode_search</mat-icon>
+            <input type="text" matInput [formControl]="myControl" placeholder="Try Vancouver, BC or hiking..." />
+        </mat-form-field> -->
+    </div>
+</div>
+
+<div class="traveldate">
+	<span>When...</span>
+	<div>
+		<mat-form-field>
+			<input matInput [matDatepicker]="picker" placeholder="Choose a date">
+			<mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+	</div>
+</div>
+
+<div class="nooftravelers">
+	<span>How many of you...</span>
+
+	<div class="nooftravelersparent">
+		<div class="nooftravelerscount">
+			<div class="center">
+				<div class="smallcaption">Adults</div>
+				<button mat-mini-fab color="primary" class="nooftravelerscounter">
+					<mat-icon aria-label="Example icon-button with a heart icon">remove</mat-icon>
+				</button> 
+				<input type="text" class="nooftravelerscount" value="1" />
+				<button mat-mini-fab color="primary" class="nooftravelerscounter">
+					<mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+				</button> 
+			</div>
+		</div>
+
+		<div class="nooftravelerscount">
+			<div class="smallcaption">Children</div>
+			<div class="center">
+				<button mat-mini-fab color="primary" class="nooftravelerscounter">
+					<mat-icon aria-label="Example icon-button with a heart icon">remove</mat-icon>
+				</button> 
+				<input type="text" class="nooftravelerscount" value="1" />
+				<button mat-mini-fab color="primary" class="nooftravelerscounter">
+					<mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+				</button> 
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- <div class="searchbtn" (click)="tSearch()"></div> -->
+<div class="searchbtn"><a routerLink="/searchresults">Let's Go</a></div> 
+</div>

@@ -1,0 +1,100 @@
+.searchholder{
+    width: auto;
+    //min-height: 150px;
+    height: auto;
+    border-radius: 5px;
+    //margin:10px;
+    padding: 25px 20px;
+    background: rgba(248, 157, 74, 0.5);
+    //background: rgba(256, 256, 256, 0.8);
+    //border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    //box-shadow: 0 0 20px #666;
+    box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.10);
+}
+
+.searchholder span{
+    font-size: 16px;
+    color: #f1f1f1;
+}
+
+.destination{
+    flex-basis: 450px;
+    margin-right: 25px;
+    flex-grow: 3;
+    flex-shrink: 12;
+    //border: 1px solid;
+}
+
+.destination .destinationtext{
+    width:100%;
+    padding:15px;
+    border-radius: 5px;
+    outline: 0;
+}
+
+
+#mat-input-0{
+    color: #fff;
+}
+
+
+.nooftravelers{
+    flex-basis: 180px;
+    max-width:180px;
+    //border: 1px solid;
+    flex-grow: 3;
+}
+
+.mat-mini-fab {
+    zoom: 0.6;
+}
+
+.nooftravelerscount{
+    width: 20px;
+    margin:0 5px;
+    text-align: center;
+    border: 0;
+    min-height:15px;
+}
+
+.nooftravelersparent{
+    display: flex;
+}
+
+.nooftravelerscount{
+    flex-grow: 1;
+    justify-content: center;
+    // border: 1px solid;
+}
+
+.nooftravelerscounter{
+    background-color: #cf8e60;
+}
+
+.smallcaption{
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px;
+}
+
+.center{
+    text-align: center;
+    margin: auto;
+}
+
+.searchbtn{
+    background:  url(../../assets/orange-go.png) no-repeat right;
+    background-size: 85%;
+    min-height: 50px;
+    flex-basis:80px;
+    max-width:80px;
+    //border: 1px solid;
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+

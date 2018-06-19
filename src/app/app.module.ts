@@ -13,7 +13,9 @@ import { SearchresultsComponent } from './searchresults/searchresults.component'
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { LocalprofileComponent } from './localprofile/localprofile.component'
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatMomentDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -27,7 +29,9 @@ import { FooterComponent } from './footer/footer.component'
     HomeComponent,
     NotfoundComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    SearchbarComponent,
+    LocalprofileComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { FooterComponent } from './footer/footer.component'
     RouterModule.forRoot([
     	{ path: '', component: HomeComponent },
     	{ path: 'searchresults', component: SearchresultsComponent},
+      { path: 'tattler/:userid', component: LocalprofileComponent}
     	{ path: '**', component: NotfoundComponent}
     ]),
     ReactiveFormsModule,

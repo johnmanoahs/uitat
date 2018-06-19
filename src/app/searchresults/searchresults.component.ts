@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-searchresults',
@@ -10,9 +10,12 @@ export class SearchresultsComponent implements OnInit {
 
 today = Date.now();
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	this.route.paramMap.subscribe(params => {
+  		console.log(params);
+  	});
   }
 
 }

@@ -1,14 +1,8 @@
 
-<div class="searchContainer">
-	
-	<div class="searchbox"></div>
-	<div class="traveldate"></div>
-	<div class="nooftravelers"></div>
-	<div class="filters"></div>
 
-</div>
+<app-searchbar></app-searchbar>
 
-<p class="resultstext">Your search results for 'Vancouver, BC' on {{ today | date:'mmm, dd, yyyy' }}</p>
+<p class="resultstext">Tattlers available in Vancouver, BC on {{ today | date: 'dd MMM yyyy' }}</p>
 
 
 
@@ -17,7 +11,7 @@
 
 
 
-
+<a routerLink="/tattler/567890">
 <mat-card class="resultcard">
 <div class="imgparent">
   <img mat-card-image 
@@ -29,6 +23,7 @@
     </p>
   </mat-card-content>
 </mat-card>
+</a>
 
 <mat-card class="resultcard">
 <div class="imgparent">
