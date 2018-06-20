@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PlotonmapComponent } from './plotonmap/plotonmap.component';
@@ -15,7 +16,10 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
-import { LocalprofileComponent } from './localprofile/localprofile.component'
+import { LocalprofileComponent } from './localprofile/localprofile.component';
+
+import { GettattlersService } from './services/gettattlers.service';
+import { Navbar1Component } from './navbar1/navbar1.component';
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatMomentDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -31,7 +35,8 @@ import { LocalprofileComponent } from './localprofile/localprofile.component'
     NavbarComponent,
     FooterComponent,
     SearchbarComponent,
-    LocalprofileComponent
+    LocalprofileComponent,
+    Navbar1Component
   ],
   imports: [
     BrowserModule,
@@ -39,10 +44,11 @@ import { LocalprofileComponent } from './localprofile/localprofile.component'
     RouterModule.forRoot([
     	{ path: '', component: HomeComponent },
     	{ path: 'searchresults', component: SearchresultsComponent},
-      { path: 'tattler/:userid', component: LocalprofileComponent}
+      { path: ':userid/:username', component: LocalprofileComponent}
     	{ path: '**', component: NotfoundComponent}
     ]),
     ReactiveFormsModule,
+    HttpModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
@@ -52,7 +58,9 @@ import { LocalprofileComponent } from './localprofile/localprofile.component'
     MatNativeDateModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    GettattlersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

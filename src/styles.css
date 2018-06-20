@@ -16,7 +16,8 @@ html, body
     margin: 0;
     padding: 0;
 
-    font-family: "Futura", Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-family: "Futura", Circular, -apple-system, BlinkMacSystemFont, 
+    Roboto, "Helvetica Neue", sans-serif !important;
     //font-family: normal normal normal 16px/1.4em "Futura LT Light" ,sans-serif;
 
     font-size: 14px;
@@ -27,6 +28,9 @@ ul{
     padding:0;
 }
 
+app-navbar1{
+    width:90%;
+}
 
 app-home{
     width: 100%;
@@ -37,5 +41,10 @@ app-footer{
 }
 
 app-searchresults{
-    overflow-y: scroll;
+    //overflow-y: scroll;
+}
+
+app-localprofile{
+    width: 100%;
+    //align-items: flex-start;
 }

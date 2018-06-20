@@ -1,0 +1,108 @@
+.tripcards{
+	
+}
+
+.pcontainer{
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	//height: 75vh;
+	align-items: flex-start;
+	justify-content: flex-start;
+	//border: 1px solid green;
+}
+
+.pright{
+	margin-left: 25px;
+}
+
+.pleft{
+	background-color: #f1f1f1;
+	border-radius: 5px;
+}
+
+/*.pleft{
+	//border: 1px solid red;
+	height: 100vh;
+	width: 30%;
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	justify-content: flex-start;
+	padding: 10px;
+}*/
+
+/*.pright{
+	//border: 1px solid blue;
+	//height:40vh;
+	width: 70%;
+}*/
+
+.profilehead{
+	//border:1px solid;
+	//min-height: 150px;	
+	width: 100%;
+	display: flex;
+}
+
+.profilepicholder{
+	//max-width: 250px;
+	//min-width: 250px;
+	//margin: 25px 25px 0px 0;
+	//flex: 1 1 250px;
+	//border: 1px solid yellow;
+}
+
+.profilepicholder img{
+	object-fit: cover;
+	width: 100%;
+	//min-width: 250px;
+	min-height: 200px;
+	padding: 5px;
+}
+
+.profilebody{
+	//height: 40vh;
+	//border:1px solid;
+	width: auto;
+	padding-left: 35px;
+}
+
+.profileinfo{
+	padding:  0 25px 0 10px;
+}
+
+.nameholder{
+	padding-left: 35px;
+	font-size: 35px;
+}
+
+.mytripscontainer{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+
+.resultcard {
+		max-width: 250px;
+		min-width: 250px;
+		margin: 0 25px 50px 0;
+		flex: 1 1 250px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

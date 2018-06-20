@@ -1,0 +1,95 @@
+<!-- <p>
+  localprofile works! {{ userid }} and {{ username }}
+</p> -->
+
+<div class="pcontainer">
+
+	<div class="pleft">
+		
+		<div class="profilepicholder">
+			<img src="http://placeimg.com/640/480/people" alt="Photo of {{name}}" /> 
+		</div>
+
+		<div class="profileinfo">
+			<p>{{name}}</p>
+			<p>35 years </p>
+			<p>something@somthing.com</p>
+		</div>
+
+	</div>
+
+	<div class="pright">
+
+		<div class="profilehead">
+
+			<div class="nameholder">
+				Hello, I am {{name}}!
+			</div>
+		</div>
+
+		<div class="profilebody">
+			<p class="bio">
+				Travel for me is "going back home"!. I live to travel. In my 20 years of travel history, I have encountered fabulous adventures. I have a passion to help others experience the same. <a href="#">Read more...</a>
+			</p>
+
+			<h3>My Listed Adventures:</h3>
+			
+			<!-- <a [routerLink]="['/tattler', tattler.id, tattler.username]" [queryParams]="{ sort: 0, quality: '720p'}"> -->
+			<div class="mytripscontainer">
+
+			<div>
+			<a href="#">
+				<mat-card class="resultcard">
+					<div class="imgparent">
+						<img mat-card-image 
+						src="http://placeimg.com/640/480/people" alt="Photo of place">
+					</div>
+					<mat-card-content>
+						<p>
+							{{name}}
+						</p>
+					</mat-card-content>
+				</mat-card>
+			</a>
+			</div>
+
+			<div>
+			<a href="#">
+				<mat-card class="resultcard">
+					<div class="imgparent">
+						<img mat-card-image 
+						src="http://placeimg.com/640/480/people" alt="Photo of place">
+					</div>
+					<mat-card-content>
+						<p>
+							{{name}}
+						</p>
+					</mat-card-content>
+				</mat-card>
+			</a>
+			</div>
+
+			<div>
+			<a href="#">
+				<mat-card class="resultcard">
+					<div class="imgparent">
+						<img mat-card-image 
+						src="http://placeimg.com/640/480/people" alt="Photo of place">
+					</div>
+					<mat-card-content>
+						<p>
+							{{name}}
+						</p>
+					</mat-card-content>
+				</mat-card>
+			</a>
+			</div>
+
+
+		</div> <!-- My trips container -->
+
+		</div>
+
+	</div>
+
+</div>

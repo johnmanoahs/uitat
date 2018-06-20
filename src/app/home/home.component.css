@@ -18,16 +18,19 @@
 }
 
 
-
+.homecontainer{
+    height: 65vh;
+    //border:1px solid red;
+}
 
 
 
 @media screen and (min-width: 768px){
 
-.homeClass{
-    width: 100%;
-    background-color: red;
-}
+    .homeClass{
+        width: 100%;
+        background-color: red;
+    }
 
     .brand{
         text-align: left;
@@ -37,10 +40,13 @@
         width: 100%;
     }
 
-    
+    app-searchbar{ 
+        width: 100%;
+
+    }
 
     .brand{
-        width: 90%;
+        //width: 90%;
         color: #f1f1f1;
         font-size: 60px;
         justify-content: center;
@@ -50,7 +56,7 @@
     .resultsContainer{
         flex: 1;
         display: none;
-        overflow: auto;
+        //overflow: auto;
         flex-wrap: wrap;
         width: 90%;
         margin-top: 40px;
@@ -85,19 +91,19 @@
     }
 
     video#bgvid { 
-       position: fixed;
-       top: 50%;
-       left: 50%;
-       min-width: 100%;
-       min-height: 100%;
-       width: auto;
-       height: auto;
-       z-index: -100;
-       transform: translateX(-50%) translateY(-50%);
-       //background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
-       background-size: cover;
-       transition: 1s opacity;
-   }
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 100%;
+     width: auto;
+     height: auto;
+     z-index: -100;
+     transform: translateX(-50%) translateY(-50%);
+     //background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+     background-size: cover;
+     transition: 1s opacity;
+ }
 
 
 }

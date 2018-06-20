@@ -10,21 +10,24 @@
 <div class="resultsContainer">
 
 
-
-<a routerLink="/tattler/567890">
+<div *ngFor="let tattler of tattlers">
+<a [routerLink]="['/', tattler.id, tattler.username]" >
+<!-- [queryParams]="{ sort: 0, quality: '720p'}"> -->
 <mat-card class="resultcard">
 <div class="imgparent">
   <img mat-card-image 
-  	src="../../assets/local_1.jpg" alt="Photo of a Shiba Inu">
+  	src="http://placeimg.com/640/480/people" alt="Photo of {{tattler.name}}">
  </div>
   <mat-card-content>
     <p>
-      Dianne Wilson
+      {{tattler.name}}
     </p>
   </mat-card-content>
 </mat-card>
 </a>
+</div>
 
+<!-- <div>
 <mat-card class="resultcard">
 <div class="imgparent">
   <img mat-card-image 
@@ -36,6 +39,7 @@
     </p>
   </mat-card-content>
 </mat-card>
+</div>
 
 <mat-card class="resultcard">
 <div class="imgparent">
@@ -120,6 +124,6 @@
       Some text...
     </p>
   </mat-card-content>
-</mat-card>
+</mat-card> -->
 
 </div>
