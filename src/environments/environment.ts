@@ -3,15 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  firebase: {
-  	apiKey: "AIzaSyB0NPxi-oBj_DCeL9fy4i4VwDRd9ueUarI",
-    authDomain: "tattle-f39e3.firebaseapp.com",
-    databaseURL: "https://tattle-f39e3.firebaseio.com",
-    projectId: "tattle-f39e3",
-    storageBucket: "tattle-f39e3.appspot.com",
-    messagingSenderId: "845413943129"
-  }
+	production: false,
+	firebase: {
+		apiKey: "AIzaSyB0NPxi-oBj_DCeL9fy4i4VwDRd9ueUarI",
+		authDomain: "tattle-f39e3.firebaseapp.com",
+		databaseURL: "https://tattle-f39e3.firebaseio.com",
+		projectId: "tattle-f39e3",
+		storageBucket: "tattle-f39e3.appspot.com",
+		messagingSenderId: "845413943129"
+	},
+	GCLOUD_PROJECT: {
+		
+	}
 };
 
 /*
