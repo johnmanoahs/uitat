@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { environment } from './../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule  } from 'angularfire2/database';
+
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -44,15 +48,17 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     RouterModule.forRoot([
     	{ path: '', component: HomeComponent },
     	{ path: 'searchresults', component: SearchresultsComponent},
-      { path: ':userid/:username', component: LocalprofileComponent}
+      { path: ':userid/:username', component: LocalprofileComponent},
     	{ path: '**', component: NotfoundComponent}
     ]),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     ReactiveFormsModule,
     HttpModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
