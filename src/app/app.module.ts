@@ -24,6 +24,7 @@ import { LocalprofileComponent } from './localprofile/localprofile.component';
 
 import { GettattlersService } from './services/gettattlers.service';
 import { Navbar1Component } from './navbar1/navbar1.component';
+import { SignupComponent } from './signup/signup.component';
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatMomentDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -40,7 +41,8 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     FooterComponent,
     SearchbarComponent,
     LocalprofileComponent,
-    Navbar1Component
+    Navbar1Component,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -49,10 +51,12 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     	{ path: '', component: HomeComponent },
     	{ path: 'searchresults', component: SearchresultsComponent},
       { path: ':userid/:username', component: LocalprofileComponent},
+      { path: 'become-a-tattler', component: SignupComponent},
     	{ path: '**', component: NotfoundComponent}
     ]),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpModule,
     MatFormFieldModule,

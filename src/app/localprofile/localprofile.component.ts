@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GettattlersService } from '../services/gettattlers.service';
-
+import {  Observable } from 'rxjs';
+import { AngularFireDatabase }  from 'angularfire2/database';
 @Component({
   selector: 'app-localprofile',
   templateUrl: './localprofile.component.html',
@@ -9,11 +10,20 @@ import { GettattlersService } from '../services/gettattlers.service';
 })
 export class LocalprofileComponent implements OnInit {
 
-userid;
-username;
-name;
+  userid;
+  username;
+  name;
 
-  constructor(private route: ActivatedRoute, private gettattlerService: GettattlersService) { }
+  tattlers; //: Observable<any[]>;
+  t;
+
+  
+
+  constructor(private route: ActivatedRoute, private gettattlerService: GettattlersService, private db: AngularFireDatabase) {
+
+    this.tattlers = db.list('tattlers').valueChanges();
+    console.log("arrays = ", this.tattlers);
+  }
 
   ngOnInit() {
   	this.route.paramMap.subscribe(params => {
@@ -23,12 +33,18 @@ name;
   		console.log(this.userid);
   	});
 
-  	this.gettattlerService.getTattlers(this.userid)
-  	 .subscribe(tattlerprofile => {
-  	 	let tp = tattlerprofile.json()
-  	 	console.log(tp);
-  	 	this.name = tp.name;
-  	 })
+    this.db.list('/tattlers').valueChanges().subscribe(tattlers => {
+      this.tattlers = tattlers;
+    })
+
+  	// this.gettattlerService.getTattlers(this.userid)
+   //  .subscribe(tattlerprofile => {
+   //    let tp = tattlerprofile;
+   //    console.log(tp);
+   //    //this.name = tp.(this.userid).name;
+   //  });
+
+
 
   }
 

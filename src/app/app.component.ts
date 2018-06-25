@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { trigger, transition, style, animate, state } from '@angular/animations';
+import { Observable } from 'rxjs';
 // import  {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 // import {MatNativeDateModule} from '@angular/material';
@@ -47,6 +49,18 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   	])
   ]
 })
+
 export class AppComponent {
 
+ 
+  
+
+
 }
+
+
+
+
+
+
+

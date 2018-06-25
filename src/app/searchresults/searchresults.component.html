@@ -11,7 +11,7 @@
 
 
 <div *ngFor="let tattler of tattlers">
-<a [routerLink]="['/', tattler.id, tattler.username]" >
+<a [routerLink]="['/', tattler.name, tattler.email]" >
 <!-- [queryParams]="{ sort: 0, quality: '720p'}"> -->
 <mat-card class="resultcard">
 <div class="imgparent">
@@ -22,6 +22,7 @@
     <p>
       {{tattler.name}}
     </p>
+    <p>C${{tattler.trips[1].name}}</p>
   </mat-card-content>
 </mat-card>
 </a>
