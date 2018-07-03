@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { GettattlersService } from '../services/gettattlers.service';
+// import { GettattlersService } from '../services/gettattlers.service';
 import {  Observable } from 'rxjs';
-import { AngularFireDatabase }  from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseObjectObservable, FirebaseListObservable }  from 'angularfire2/database';
 @Component({
   selector: 'app-localprofile',
   templateUrl: './localprofile.component.html',
@@ -12,38 +12,47 @@ export class LocalprofileComponent implements OnInit {
 
   userid;
   username;
-  name;
-
-  tattlers; //: Observable<any[]>;
-  t;
+  tattler$: Object;
+  trips: Observable<any>;
 
   
 
-  constructor(private route: ActivatedRoute, private gettattlerService: GettattlersService, private db: AngularFireDatabase) {
+  constructor(private route: ActivatedRoute, 
+    //private gettattlerService: GettattlersService, 
+    private db: AngularFireDatabase) {
 
-    this.tattlers = db.list('tattlers').valueChanges();
-    console.log("arrays = ", this.tattlers);
   }
 
   ngOnInit() {
   	this.route.paramMap.subscribe(params => {
   		//console.log(params);
-  		this.userid = +params.get('userid');
+  		this.userid = params.get('userid');
   		this.username = params.get('username');
-  		console.log(this.userid);
-  	});
+  		
+      this.db.object('/tattlers/' + this.userid)
+      .subscribe(tattler => {
+        this.tattler$ = tattler;
+//                 this.trips = this.tattler$['trips'];//this.tattler$.valueOf().trips.valueOf().children;
+//                 //console.log(JSON.parse(JSON.stringify(this.trips)));
+//         let arr = [];
+//         for (let elem in this.tattler$) {
+//    arr.push(this.tattler$[elem]);
+// }
+       // console.log('db obj', arr);
 
-    this.db.list('/tattlers').valueChanges().subscribe(tattlers => {
-      this.tattlers = tattlers;
-    })
+       this.trips = this.db.list('/tattlers').map(items => {
+         console.log('items', items)
+         return items
+       })
+       this.trips.subscribe(items => {
+         console.log(items.json)
+       })
+       console.log(this.trips);
 
-  	// this.gettattlerService.getTattlers(this.userid)
-   //  .subscribe(tattlerprofile => {
-   //    let tp = tattlerprofile;
-   //    console.log(tp);
-   //    //this.name = tp.(this.userid).name;
-   //  });
+      })
 
+
+    });
 
 
   }

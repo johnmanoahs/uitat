@@ -1,16 +1,17 @@
-<form [formGroup]="form">
-	<form class="form-group">
-		<div class="row">
-			<div class="col">
-				<label for="firstname">First name</label>
-				<input type="text" class="form-control" id="firstname" placeholder="First name">
-			</div>
-			<div class="col">
-				<label for="lastname" class="for">Last name</label>
-				<input type="text" class="form-control" id="lastname" placeholder="Last name">
-			</div>
+<div class="formcontainer">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+	<div class="form-group">
+	<div class="row">
+		<div class="col">
+			<label for="firstname">First name</label>
+			<input type="text" class="form-control" formControlName="firstname" id="firstname" placeholder="First name">
 		</div>
-	</form>
+		<div class="col">
+			<label for="lastname" class="for">Last name</label>
+			<input type="text" class="form-control" formControlName="lastname" id="lastname" placeholder="Last name">
+		</div>
+	</div>
+	</div>
 
 	<div class="form-group">
 		<label for="email">Email address</label>
@@ -38,28 +39,37 @@
 	</div>
 
 	<div class="form-group">
-		<label for="inputAddress">Address</label>
-		<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+		<label for="profilepic">Upload profile pic</label>
+		<!-- <input type="file" class="form-control" id="profilepic"/> 
+			<button class="tn btn-primary">Upload</button> -->
+			<!-- <file-upload #fn (filepathtoForm)="receiveFilename($event, fn)"></file-upload> -->
+			<!-- <file-upload #fn (change)="shows(fn)"></file-upload> -->
+			<input type="text" value={filepath} name="profilepic" formControlName="profilepic" id="profilepic" class="form-control">
+	</div>
+
+	<div class="form-group">
+		<label for="address">Address</label>
+		<input type="text" class="form-control" id="address" formControlName="address" placeholder="1234 Main St">
 	</div>
 	<div class="form-group">
-		<label for="inputAddress2">Address 2</label>
-		<input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+		<label for="address2">Address 2</label>
+		<input type="text" class="form-control" id="address2" formControlName="address2" placeholder="Apartment, studio, or floor">
 	</div>
 	<div class="form-row">
 		<div class="form-group col-md-6">
-			<label for="inputCity">City</label>
-			<input type="text" class="form-control" id="inputCity">
+			<label for="city">City</label>
+			<input type="text" class="form-control" id="city" formControlName="city">
 		</div>
 		<div class="form-group col-md-4">
-			<label for="inputState">State</label>
-			<select id="inputState" class="form-control">
+			<label for="state">State</label>
+			<select id="state" formControlName="state" class="form-control">
 				<option selected>Choose...</option>
 				<option>...</option>
 			</select>
 		</div>
 		<div class="form-group col-md-2">
-			<label for="inputZip">Zip</label>
-			<input type="text" class="form-control" id="inputZip">
+			<label for="postcode">Zip</label>
+			<input type="text" class="form-control" id="postcode" formControlName="postcode">
 		</div>
 	</div>
 
@@ -67,11 +77,11 @@
 		<div class="row">
 			<div class="col">
 				<label for="cellphone">Cellphone no</label>
-				<input type="tel" id="cellphone" class="form-control" />
+				<input type="tel" id="cellphone" formControlName="cellphone" class="form-control" />
 			</div>
 			<div class="col">
 				<label for="altphone">Alternate phone no</label>
-				<input type="tel" id="altphone" class="form-control" />
+				<input type="tel" id="altphone" formControlName="altphone" class="form-control" />
 			</div>
 		</div>
 	</div>
@@ -79,44 +89,45 @@
 
 	<div class="form-group">
 		<label for="bio">About me (50 to 300 words)</label>
-		<textarea class="form-control" id="bio" rows="3"></textarea>
+		<textarea class="form-control" id="bio" formControlName="bio" rows="3"></textarea>
 	</div>
 
 	<div class="form-group">
 		<div class="row">
 			<div class="col">
 				<label for="languagesspoken">Languages spoken:</label>
-				<select multiple class="form-control" id="languagesspoken">
+				<select multiple class="form-control" id="languagesspoken" formControlName="languagesspoken">
 					<option 
-						*ngFor="let languagespoken of languagesspoken" value="{{ languagespoken }}">
-						{{ languagespoken }}
-					</option>
-				</select>
-			</div>
-			<div class="col" id="cln">
-				<label for="culturalexperience">Cultural experience:</label>
-				<div class="row" id="ce">
-					<div class="col">					
-						<select id="culturalexperience" class="form-control">
-							<option *ngFor="let ce of culturalexperiences" value={{ce}}>{{ce}}</option>
-						</select>
-					</div>
-					<div class="col">
-						<input type="number" class="form-control" />
-					</div>
-					<div class="col">
-						<button type="button" class="btn btn-primary" (click)="addrow()">Add more</button>
-					</div>
+					*ngFor="let languagespoken of languagesspoken" value="{{ languagespoken.$value }}">
+					{{ languagespoken.$value }}
+				</option>
+			</select>
+		</div>
+		<div class="col" id="cln">
+			<label for="culturalexperience">Cultural experience:</label>
+			<div class="row" id="ce">
+				<div class="col">					
+					<select id="culturalexperience" formControlName="culturalexperience" class="form-control">
+						<option *ngFor="let ce of culturalexperiences" value={{ce.$value}}>{{ce.$value}}</option>
+					</select>
+				</div>
+				<div class="col">
+					<input type="number" class="form-control" />
+				</div>
+				<div class="col">
+					<button type="button" class="btn btn-primary" (click)="addrow()">Add more</button>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
 
 	<!-- <div class="form-check">
 		<input type="checkbox" class="form-check-input" id="exampleCheck1">
 		<label class="form-check-label" for="exampleCheck1">Check me out</label>
 	</div> -->
-	
+
 	<button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>

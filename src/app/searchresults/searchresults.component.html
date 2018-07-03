@@ -10,19 +10,19 @@
 <div class="resultsContainer">
 
 
-<div *ngFor="let tattler of tattlers">
-<a [routerLink]="['/', tattler.name, tattler.email]" >
+<div *ngFor="let tattler of tattlers$ | async">
+<a [routerLink]="['/', tattler.$key]" >
 <!-- [queryParams]="{ sort: 0, quality: '720p'}"> -->
 <mat-card class="resultcard">
 <div class="imgparent">
   <img mat-card-image 
-  	src="http://placeimg.com/640/480/people" alt="Photo of {{tattler.name}}">
+  	src="http://placeimg.com/640/480/people" alt="Photo of {{tattler.firstname}}">
  </div>
   <mat-card-content>
     <p>
-      {{tattler.name}}
+      {{tattler.$key}}
     </p>
-    <p>C${{tattler.trips[1].name}}</p>
+    <p>C$</p>
   </mat-card-content>
 </mat-card>
 </a>

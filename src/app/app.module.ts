@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { environment } from './../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule  } from 'angularfire2/database';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
@@ -25,6 +27,9 @@ import { LocalprofileComponent } from './localprofile/localprofile.component';
 import { GettattlersService } from './services/gettattlers.service';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { SignupComponent } from './signup/signup.component';
+import * as firebase from 'firebase/app';
+import { DropZoneDirective } from './drop-zone.directive';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 //import {MatNativeDateModule} from '@angular/material';
 //import {MatMomentDateModule} from '@angular/material';
 //import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -42,7 +47,9 @@ import { SignupComponent } from './signup/signup.component';
     SearchbarComponent,
     LocalprofileComponent,
     Navbar1Component,
-    SignupComponent
+    SignupComponent,
+    DropZoneDirective,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +57,9 @@ import { SignupComponent } from './signup/signup.component';
     RouterModule.forRoot([
     	{ path: '', component: HomeComponent },
     	{ path: 'searchresults', component: SearchresultsComponent},
-      { path: ':userid/:username', component: LocalprofileComponent},
+     
       { path: 'become-a-tattler', component: SignupComponent},
+       { path: ':userid', component: LocalprofileComponent},
     	{ path: '**', component: NotfoundComponent}
     ]),
     AngularFireModule.initializeApp(environment.firebase),
@@ -59,6 +67,8 @@ import { SignupComponent } from './signup/signup.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    // AngularFirestoreModule,
+    // AngularFireStorageModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,

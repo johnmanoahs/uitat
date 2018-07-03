@@ -11,9 +11,6 @@ export const environment = {
 		projectId: "tattle-f39e3",
 		storageBucket: "tattle-f39e3.appspot.com",
 		messagingSenderId: "845413943129"
-	},
-	GCLOUD_PROJECT: {
-		
 	}
 };
 

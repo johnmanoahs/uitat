@@ -1,0 +1,8 @@
+.formcontainer{
+	display: flex;
+}
+
+.formcontainer .divcontainer{
+	justify-content: center;
+	align-items: center;
+}

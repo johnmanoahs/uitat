@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GettattlersService } from '../services/gettattlers.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
+
 
 @Component({
 	selector: 'app-searchresults',
@@ -11,35 +13,20 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class SearchresultsComponent implements OnInit {
 
 	today = Date.now();
-	tattlers:any[];
+	tattlers;
+	tattlerRef; //:AngularFireList<any>;
+	tattlers$: Observable<any>;
 
-	constructor(private route: ActivatedRoute, private tattlerservice: GettattlersService, private db: AngularFireDatabase) { 
+	constructor(private route: ActivatedRoute, 
+		private tattlerservice: GettattlersService, 
+		private db: AngularFireDatabase) { 
 
 	}
 
 	ngOnInit() {
-		this.route.paramMap.subscribe(params => {
-			console.log('params = ' + params);
-		});
+		
+		this.tattlers$ = this.db.list('/tattlers');
 
-		this.db.list('/tattlers').valueChanges().subscribe(tattlers => {
-			this.tattlers = tattlers;
-		});
-
-		this.tattlerservice.getTattlers()
-			// .subscribe(
-
-			// 	response => {
-			// 	this.tattlers = response.json();
-			// 	console.log(this.tattlers);
-			// }, 
-
-			// 	(Error: Response) => {
-			// 	alert(Error);
-			// })
-
-  	// this.http.get("https://jsonplaceholder.typicode.com/users")
-
-  }
+	}
 
 }

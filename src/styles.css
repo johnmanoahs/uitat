@@ -38,6 +38,7 @@ app-home{
 
 app-footer{
     width: 90%;
+    display: none;
 }
 
 app-searchresults{
